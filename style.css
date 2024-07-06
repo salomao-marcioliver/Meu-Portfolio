@@ -1,0 +1,95 @@
+/* global */
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: 600px 1fr;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #101214;
+    color: #7A7C80;
+}
+
+h2, .white {
+    color: #fff;
+}
+
+a {
+    color: #7A7C80;
+    text-decoration: none;
+}
+
+/* section 1 */
+.section-1 {
+    padding-top: 40vh;
+    text-align: center;
+}
+
+.section-1 p {
+    font-size: 1.1rem;
+    padding-bottom: 10px;
+    margin: 0;
+}
+
+.section-1 h2 {
+    font-size: 1.7rem;
+    margin-bottom: 10px;
+}
+
+.section-1 a {
+    font-size: 1.5rem;
+    padding: 10px;
+}
+
+/* section 2 */
+.section-2 {
+    padding-top: 10vh;
+    width: 89%;
+    padding-right: 100px;
+    position: relative; /* Adiciona posicionamento relativo */
+    overflow-y: auto; /* Habilita a rolagem vertical apenas para a coluna direita */
+    max-height: calc(100vh - 10vh); /* Altura máxima para ocupar todo o viewport menos o padding-top da .section-2 */
+}
+
+.section-2 h2 {
+    font-size: 1.7rem;
+    margin-bottom: 10px;
+}
+
+.section-2 p {
+    font-size: 1.1rem;
+    padding-bottom: 10px;
+    margin: 0;
+    text-align: justify;
+}
+
+.section-2 a:hover {
+    color: #fff;
+}
+
+/* animations / utilities */
+.white:hover {
+    position: relative;
+    padding-left: 10px;
+}
+
+/* media queries */
+@media (max-width: 780px) {
+    .grid-2 {
+        grid-template-columns: 1fr;
+    }
+    .section-1 {
+        padding: 0;
+        padding-top: 5rem;
+    }
+    .section-2 {
+        padding: 0;
+        padding-left: 1.5rem;
+        padding-top: 2rem;
+        max-height: unset; /* Remove a altura máxima para que a coluna direita possa rolar livremente */
+    }
+}
